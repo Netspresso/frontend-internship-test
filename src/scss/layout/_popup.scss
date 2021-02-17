@@ -1,0 +1,70 @@
+$hd-f-family: 'Lobster',
+cursive;
+$white: #fff;
+$black: #000;
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    // width: 320px;
+    // height: 360px;
+    padding: 48px;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    border-radius: 5px;
+    background-color: $white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+
+    h1 {
+        text-align: center;
+        font-family: $hd-f-family;
+        font-size: 2.5em;
+    }
+
+
+    &>* {
+        margin: 10px 0;
+    }
+
+    .form-check {
+        width: 240px;
+    }
+
+    #password,
+    #email,
+    #submit {
+        padding: 16px;
+    }
+
+    #submit {
+        background-color: $black;
+        color: $white;
+        border: none;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+
+    i {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.5em;
+        margin: 0;
+        transform: translateX(20%) translateY(-20%);
+        -webkit-transform: translateX(20%) translateY(-20%);
+        -moz-transform: translateX(20%) translateY(-20%);
+        -ms-transform: translateX(20%) translateY(-20%);
+        -o-transform: translateX(20%) translateY(-20%);
+    }
+}
