@@ -18,11 +18,14 @@
       <!-- Here goes your popup form HTML code -->
       <h1>Login</h1>
       <input type="email" placeholder="E-mail" id="email">
-      <input type="password" placeholder="Password" id="password">
-      <div class="form-check">
-        <input type="checkbox" id="agreements">
-        <label for="agreements">I agree with terms & conditions</label>
-      </div>
+      <input type="password" placeholder="Password" id="password" minlength="6">
+
+        
+        <label class="form-check">I agree with terms & conditions
+          <input type="checkbox">
+          <span class="custom-check"></span>
+        </label>
+
       <input type="submit" value="Submit" id="submit">
       <i class="fas fa-times-circle"></i>
     </div>

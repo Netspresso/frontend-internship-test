@@ -1,6 +1,8 @@
 $hd-f-family: 'Lobster',
 cursive;
 $white: #fff;
+$white-smoke: #eee;
+$gray: #ddd;
 $black: #000;
 
 .popup {
@@ -37,7 +39,70 @@ $black: #000;
     }
 
     .form-check {
-        width: 240px;
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        // font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        // Hide browser custom checkbox
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        // Create a custom checkbox
+        .custom-check {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: $white-smoke;
+        }
+
+        // On mouse-over, add a grey background color
+        &:hover .custom-check {
+            background-color: $gray;
+        }
+
+        // When the checkbox is checked, add a blue background
+        // & input:checked~.custom-check {
+        //     background-color: #2196F3;
+        // }
+
+        // Create the checkmark/indicator (hidden when not checked)
+        .custom-check:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        // Show the checkmark when checked
+        & input:checked~.custom-check:after {
+            display: block;
+        }
+
+        // Style the checkmark/indicator
+        & .custom-check:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid $black;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
     }
 
     #password,
